@@ -7,14 +7,16 @@ wg = WordGenerator()
 
 word = wg.generate_word().upper()
 guess_word = "-" * len(word)
-uniq_letters = set(word)
-chance = len(uniq_letters)
+chance = len(set(word))
 used_letters = set()
 
 
 def get_help(bot, update):
     global guess_word, chance
     chat_id = update.effective_user.id
+    if chance == 1:
+        bot.send_message(chat_id, "Dear, {}, u have only 1 life ☹️".format(update.effective_user.name))
+        return
     chance -= 1
     for i in range(len(word)):
         if guess_word[i] == '-':
@@ -33,22 +35,22 @@ def get_help(bot, update):
 
 def get_info(bot, update):
     user = update.effective_user.name
-    message = "Hi, {}!\nPress /help to get hint \nYou will lose one life for one hint.".format(user)
+    message = "Press /help to get hint \nYou will lose one life for one hint.".format(user)
     bot.send_message(update.effective_user.id, message)
 
 
 def start(bot, update):
-    message = "*Press any letter to start our game...*\n*To get more information press - /info*"
+    name = update.effective_user.name
+    message = "Dear, _{}_,\nPress *any letter* to start our game...\nTo get more information press - _/info_".format(name)
     bot.send_message(update.effective_user.id, message, parse_mode='Markdown')
     check_the_letter(bot, update)
 
 
 def restart_game():
-    global word, guess_word, chance, uniq_letters, used_letters
+    global word, guess_word, chance, used_letters
     word = wg.generate_word().upper()
     guess_word = "-" * len(word)
-    uniq_letters = set(word)
-    chance = len(uniq_letters)
+    chance = len(set(word))
     used_letters = set()
 
 
@@ -56,12 +58,12 @@ def check_the_letter(bot, update):
 
     global word, guess_word, chance, used_letters
     chat_id = update.effective_user.id
-    user_input = update.message.text
-    if len(user_input) > 1 and user_input != "/start":
+    user_input = update.message.text.upper()
+    if len(user_input) > 1 and user_input != "/START":
         if user_input.upper() == word:
             bot.send_message(chat_id, "🎉🎊You nailed!!!🎉🎊")
         else:
-            bot.send_message(chat_id, "❗️❗️❗You lose❗️❗️❗️\nThe word was '{}'".format(word))
+            bot.send_message(chat_id, "❗️❗️❗You lose❗️❗️❗️\nThe word was '{}'".format(b(word)))
         restart_game()
     elif len(user_input) == 1:
         if user_input in word:
@@ -71,7 +73,7 @@ def check_the_letter(bot, update):
                     index = word.index(user_input, index + 1)
                     guess_word = guess_word[:index] + user_input + guess_word[index + 1:]
             used = ', '.join(used_letters)
-            text = "✅\n" + "Wrong letters: " + used + "\n*" + guess_word + "*\n\n" + hearts(chance)
+            text = "✅\n" + "Wrong letters: " + used + "\n" + b(guess_word) + "\n\n" + hearts(chance)
             if guess_word == word:
                 text = "🎉🎊Yeah, {} , u did it - {}🎉🎊".format(update.effective_user.name, guess_word)
                 restart_game()
@@ -84,7 +86,7 @@ def check_the_letter(bot, update):
             else:
                 used_letters.add(user_input)
                 used = ', '.join(used_letters)
-                text = "❌\n" + "Wrong letters: " + used + "\n*" + guess_word + "*\n\n" + hearts(chance)
+                text = "❌\n" + "Wrong letters: " + used + "\n" + b(guess_word) + "\n\n" + hearts(chance)
                 bot.send_message(chat_id, text, reply_to_message_id=update.message.message_id, parse_mode='Markdown')
 
 
