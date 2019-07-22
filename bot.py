@@ -1,7 +1,7 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from game import WordGenerator
 from message_utils import b, i, hearts
-
+from oxford_dict import DefinitionProvider
 import os
 wg = WordGenerator()
 
@@ -9,9 +9,13 @@ word = wg.generate_word().upper()
 guess_word = "-" * len(word)
 chance = len(set(word))
 used_letters = set()
+can_help = False
+dp = DefinitionProvider(api_key='25eb93d4f4a50827a04294a5967c7c03', app_id='544b9168')
+
+information = dp.get_definition(word)
 
 
-def get_help(bot, update):
+def ask_letter(bot, update):
     global guess_word, chance
     chat_id = update.effective_user.id
     if chance == 1:
@@ -35,23 +39,43 @@ def get_help(bot, update):
 
 def get_info(bot, update):
     user = update.effective_user.name
-    message = "Press /help to get hint \nYou will lose one life for one hint.".format(user)
+    message = "**Press /letter to get letter \nYou will lose one life." \
+              "\n**Press /help to get meaning of the word (You can use it only ones)\nYou will lose one life.".format(user)
     bot.send_message(update.effective_user.id, message)
 
 
 def start(bot, update):
     name = update.effective_user.name
-    message = "Dear, _{}_,\nPress *any letter* to start our game...\nTo get more information press - _/info_".format(name)
+    message = "Dear, _{}_,\n What am I ? - {}\nTo get more information press - _/info_".format(name, information['definition'])
     bot.send_message(update.effective_user.id, message, parse_mode='Markdown')
     check_the_letter(bot, update)
 
 
 def restart_game():
-    global word, guess_word, chance, used_letters
+    global word, guess_word, chance, used_letters, can_help
     word = wg.generate_word().upper()
     guess_word = "-" * len(word)
     chance = len(set(word))
     used_letters = set()
+    can_help = False
+
+
+def get_help(bot, update):
+    global chance, guess_word, can_help
+    chat_id = update.effective_user.id
+    name = update.effective_user.name
+    if can_help:
+        message = 'You have used this action.'
+        bot.send_message(chat_id, message)
+        return
+    if chance < 2:
+        message = '{}, you cannt use this help, case of ur life'.format(name)
+        bot.send_message(chat_id, message)
+    else:
+        chance -= 1
+        message = '2nd description : {}\nYou gave your life\n {}\n{}'.format(information['hint'], guess_word, hearts(chance))
+        bot.send_message(chat_id, message)
+    can_help = True
 
 
 def check_the_letter(bot, update):
@@ -96,6 +120,7 @@ updater = Updater(token)
 
 help_handler = CommandHandler('start', start)
 updater.dispatcher.add_handler(help_handler)
+updater.dispatcher.add_handler(CommandHandler('letter', ask_letter))
 updater.dispatcher.add_handler(CommandHandler('help', get_help))
 updater.dispatcher.add_handler(CommandHandler('info', get_info))
 updater.dispatcher.add_handler(MessageHandler(filters=Filters.text, callback=check_the_letter))
