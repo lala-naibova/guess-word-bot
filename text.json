@@ -1,0 +1,558 @@
+
+{
+    "id": "pen",
+    "metadata": {
+        "operation": "retrieve",
+        "provider": "Oxford University Press",
+        "schema": "RetrieveEntry"
+    },
+    "results": [
+        {
+            "id": "pen",
+            "language": "en-gb",
+            "lexicalEntries": [
+                {
+                    "entries": [
+                        {
+                            "etymologies": [
+                                "Middle English (originally denoting a feather with a sharpened quill): from Old Frenchpenne, from Latinpenna‘feather’ (in late Latin‘pen’)"
+                            ],
+                            "homographNumber": "100",
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "an instrument for writing or drawing with ink, typically consisting of a metal nib or ball, or a nylon tip, fitted into a metal or plastic holder."
+                                    ],
+                                    "id": "m_en_gbus0761710.006",
+                                    "shortDefinitions": [
+                                        "instrument for writing"
+                                    ],
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "the occupation of writing"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "she was forced to support herself by the pen"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0761710.009",
+                                            "notes": [
+                                                {
+                                                    "text": "\"the pen\"",
+                                                    "type": "wordFormNote"
+                                                }
+                                            ],
+                                            "shortDefinitions": [
+                                                "occupation of writing"
+                                            ]
+                                        },
+                                        {
+                                            "definitions": [
+                                                "an electronic device like a pen, used in conjunction with a writing surface to enter commands or data into a computer."
+                                            ],
+                                            "domains": [
+                                                {
+                                                    "id": "computing",
+                                                    "text": "Computing"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0761710.011",
+                                            "shortDefinitions": [
+                                                "electronic pen-like device"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "the tapering cartilaginous internal shell of a squid."
+                                    ],
+                                    "domains": [
+                                        {
+                                            "id": "zoology",
+                                            "text": "Zoology"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0761710.013",
+                                    "shortDefinitions": [
+                                        "internal shell of squid"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-gb",
+                    "lexicalCategory": {
+                        "id": "noun",
+                        "text": "Noun"
+                    },
+                    "pronunciations": [
+                        {
+                            "audioFile": "http://audio.oxforddictionaries.com/en/mp3/pen_gb_1.mp3",
+                            "dialects": [
+                                "British English"
+                            ],
+                            "phoneticNotation": "IPA",
+                            "phoneticSpelling": "pɛn"
+                        }
+                    ],
+                    "text": "pen"
+                },
+                {
+                    "entries": [
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "id": "transitive",
+                                    "text": "Transitive",
+                                    "type": "Subcategorization"
+                                }
+                            ],
+                            "homographNumber": "101",
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "write or compose"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "Olivia penned award-winning poetry"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0761710.017",
+                                    "shortDefinitions": [
+                                        "write or compose"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-gb",
+                    "lexicalCategory": {
+                        "id": "verb",
+                        "text": "Verb"
+                    },
+                    "pronunciations": [
+                        {
+                            "audioFile": "http://audio.oxforddictionaries.com/en/mp3/pen_gb_1.mp3",
+                            "dialects": [
+                                "British English"
+                            ],
+                            "phoneticNotation": "IPA",
+                            "phoneticSpelling": "pɛn"
+                        }
+                    ],
+                    "text": "pen"
+                }
+            ],
+            "type": "headword",
+            "word": "pen"
+        },
+        {
+            "id": "pen",
+            "language": "en-gb",
+            "lexicalEntries": [
+                {
+                    "entries": [
+                        {
+                            "etymologies": [
+                                "Old English penn, of unknown origin"
+                            ],
+                            "homographNumber": "200",
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "a small enclosure in which sheep, pigs, or other farm animals are kept"
+                                    ],
+                                    "domains": [
+                                        {
+                                            "id": "farming",
+                                            "text": "Farming"
+                                        }
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "a sheep pen"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0761720.006",
+                                    "shortDefinitions": [
+                                        "small enclosure for farm animals"
+                                    ],
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "a number of animals in or sufficient to fill a pen"
+                                            ],
+                                            "domains": [
+                                                {
+                                                    "id": "farming",
+                                                    "text": "Farming"
+                                                }
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "a pen of twenty-five Cheviots"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0761720.009",
+                                            "shortDefinitions": [
+                                                "number of animals in pen"
+                                            ]
+                                        },
+                                        {
+                                            "definitions": [
+                                                "any small enclosure in which someone or something can be confined"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "she took the baby out of the pen and played with it"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0761720.010",
+                                            "shortDefinitions": [
+                                                "any small enclosure"
+                                            ]
+                                        },
+                                        {
+                                            "definitions": [
+                                                "a covered dock for a submarine or other warship"
+                                            ],
+                                            "domains": [
+                                                {
+                                                    "id": "naval",
+                                                    "text": "Naval"
+                                                }
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "U-boat pens"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0761720.011",
+                                            "shortDefinitions": [
+                                                "covered dock for submarine"
+                                            ]
+                                        }
+                                    ],
+                                    "thesaurusLinks": [
+                                        {
+                                            "entry_id": "pen",
+                                            "sense_id": "t_en_gb0010840.001"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "(in the West Indies) a farm or plantation."
+                                    ],
+                                    "domains": [
+                                        {
+                                            "id": "farming",
+                                            "text": "Farming"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0761720.013",
+                                    "shortDefinitions": [
+                                        "farm or plantation"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-gb",
+                    "lexicalCategory": {
+                        "id": "noun",
+                        "text": "Noun"
+                    },
+                    "pronunciations": [
+                        {
+                            "audioFile": "http://audio.oxforddictionaries.com/en/mp3/pen_gb_1.mp3",
+                            "dialects": [
+                                "British English"
+                            ],
+                            "phoneticNotation": "IPA",
+                            "phoneticSpelling": "pɛn"
+                        }
+                    ],
+                    "text": "pen"
+                },
+                {
+                    "entries": [
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "id": "transitive",
+                                    "text": "Transitive",
+                                    "type": "Subcategorization"
+                                }
+                            ],
+                            "homographNumber": "201",
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "put or keep (an animal) in a pen"
+                                    ],
+                                    "domains": [
+                                        {
+                                            "id": "farming",
+                                            "text": "Farming"
+                                        }
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "it was the practice to pen the sheep for clipping"
+                                        },
+                                        {
+                                            "text": "these cattle need to be penned in at night"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0761720.024",
+                                    "shortDefinitions": [
+                                        "put or keep in pen"
+                                    ],
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "confine someone in a restricted space"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "they had been penned up day and night in the house"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0761720.030",
+                                            "notes": [
+                                                {
+                                                    "text": "\"pen someone up/in\"",
+                                                    "type": "wordFormNote"
+                                                }
+                                            ],
+                                            "shortDefinitions": [
+                                                "confine in restricted space"
+                                            ],
+                                            "thesaurusLinks": [
+                                                {
+                                                    "entry_id": "shut_someone%2Fsomething_in",
+                                                    "sense_id": "t_en_gb0013439.005"
+                                                },
+                                                {
+                                                    "entry_id": "shut_someone%2Fsomething_up",
+                                                    "sense_id": "t_en_gb0013439.010"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "thesaurusLinks": [
+                                        {
+                                            "entry_id": "pen",
+                                            "sense_id": "t_en_gb0010840.002"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-gb",
+                    "lexicalCategory": {
+                        "id": "verb",
+                        "text": "Verb"
+                    },
+                    "pronunciations": [
+                        {
+                            "audioFile": "http://audio.oxforddictionaries.com/en/mp3/pen_gb_1.mp3",
+                            "dialects": [
+                                "British English"
+                            ],
+                            "phoneticNotation": "IPA",
+                            "phoneticSpelling": "pɛn"
+                        }
+                    ],
+                    "text": "pen"
+                }
+            ],
+            "type": "headword",
+            "word": "pen"
+        },
+        {
+            "id": "pen",
+            "language": "en-gb",
+            "lexicalEntries": [
+                {
+                    "entries": [
+                        {
+                            "etymologies": [
+                                "mid 16th century: of unknown origin"
+                            ],
+                            "homographNumber": "300",
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "a female swan."
+                                    ],
+                                    "domains": [
+                                        {
+                                            "id": "zoology",
+                                            "text": "Zoology"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0761730.005",
+                                    "shortDefinitions": [
+                                        "female swan"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-gb",
+                    "lexicalCategory": {
+                        "id": "noun",
+                        "text": "Noun"
+                    },
+                    "pronunciations": [
+                        {
+                            "audioFile": "http://audio.oxforddictionaries.com/en/mp3/pen_gb_1.mp3",
+                            "dialects": [
+                                "British English"
+                            ],
+                            "phoneticNotation": "IPA",
+                            "phoneticSpelling": "pɛn"
+                        }
+                    ],
+                    "text": "pen"
+                }
+            ],
+            "type": "headword",
+            "word": "pen"
+        },
+        {
+            "id": "pen",
+            "language": "en-gb",
+            "lexicalEntries": [
+                {
+                    "entries": [
+                        {
+                            "homographNumber": "400",
+                            "senses": [
+                                {
+                                    "crossReferenceMarkers": [
+                                        "short for penitentiary (sense 1)"
+                                    ],
+                                    "crossReferences": [
+                                        {
+                                            "id": "penitentiary",
+                                            "text": "penitentiary",
+                                            "type": "abbreviation of"
+                                        }
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "you could get twenty years in a federal pen for shooting your mouth off like that"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0761740.005",
+                                    "regions": [
+                                        {
+                                            "id": "north_american",
+                                            "text": "North_American"
+                                        }
+                                    ],
+                                    "registers": [
+                                        {
+                                            "id": "informal",
+                                            "text": "Informal"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-gb",
+                    "lexicalCategory": {
+                        "id": "noun",
+                        "text": "Noun"
+                    },
+                    "pronunciations": [
+                        {
+                            "audioFile": "http://audio.oxforddictionaries.com/en/mp3/pen_gb_1.mp3",
+                            "dialects": [
+                                "British English"
+                            ],
+                            "phoneticNotation": "IPA",
+                            "phoneticSpelling": "pɛn"
+                        }
+                    ],
+                    "text": "pen"
+                }
+            ],
+            "type": "headword",
+            "word": "pen"
+        },
+        {
+            "id": "PEN",
+            "language": "en-gb",
+            "lexicalEntries": [
+                {
+                    "entries": [
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "id": "abbreviation",
+                                    "text": "Abbreviation",
+                                    "type": "Residual"
+                                }
+                            ],
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "International Association of Poets, Playwrights, Editors, Essayists, and Novelists."
+                                    ],
+                                    "domains": [
+                                        {
+                                            "id": "literature",
+                                            "text": "Literature"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0761690.004",
+                                    "shortDefinitions": [
+                                        "International Association of Poets, Playwrights, Editors and Novelists"
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "Peruvian nuevo sol(es)."
+                                    ],
+                                    "id": "m_en_gbus0761690.007",
+                                    "shortDefinitions": [
+                                        "Peruvian nuevo sol(es)"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-gb",
+                    "lexicalCategory": {
+                        "id": "residual",
+                        "text": "Residual"
+                    },
+                    "pronunciations": [
+                        {
+                            "audioFile": "http://audio.oxforddictionaries.com/en/mp3/pen_gb_1.mp3",
+                            "dialects": [
+                                "British English"
+                            ],
+                            "phoneticNotation": "IPA",
+                            "phoneticSpelling": "pɛn"
+                        }
+                    ],
+                    "text": "PEN"
+                }
+            ],
+            "type": "headword",
+            "word": "PEN"
+        }
+    ],
+    "word": "pen"
+}
