@@ -52,11 +52,12 @@ def start(bot, update):
 
 
 def restart_game():
-    global word, guess_word, chance, used_letters, can_help
+    global word, guess_word, chance, used_letters, can_help, information
     word = wg.generate_word().upper()
     guess_word = "-" * len(word)
     chance = len(set(word))
     used_letters = set()
+    information = dp.get_definition(word)
     can_help = False
 
 
