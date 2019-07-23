@@ -1,4 +1,4 @@
-irom telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from game import WordGenerator
 from message_utils import b, i, hearts
 from oxford_dict import DefinitionProvider
