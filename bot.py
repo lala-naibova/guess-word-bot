@@ -1,4 +1,4 @@
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+irom telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from game import WordGenerator
 from message_utils import b, i, hearts
 from oxford_dict import DefinitionProvider
@@ -10,7 +10,12 @@ guess_word = "-" * len(word)
 chance = len(set(word))
 used_letters = set()
 can_help = False
-dp = DefinitionProvider(api_key='25eb93d4f4a50827a04294a5967c7c03', app_id='544b9168')
+
+
+api_key = os.environ['api_key']
+app_id = os.environ['api_id']
+dp = DefinitionProvider(api_key=api_key, app_id=app_id)
+
 
 information = dp.get_definition(word)
 
@@ -45,8 +50,9 @@ def get_info(bot, update):
 
 
 def start(bot, update):
+    global word
     name = update.effective_user.name
-    message = "Dear, _{}_,\n What am I ? - {}\nTo get more information press - _/info_".format(name, information['definition'])
+    message = "Dear, _{}_,\n What am I ? - {} \n Word length - {}\nTo get more information press - _/info_".format(name, information['definition'], len(word))
     bot.send_message(update.effective_user.id, message, parse_mode='Markdown')
     check_the_letter(bot, update)
 
