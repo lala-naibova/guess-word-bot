@@ -2,13 +2,15 @@
 
 ## a telegram bot to play guess word game 🤓
 
-When you start the game, bot picks up a random word (via random-word-api) and gives you chances to guess the word by typing letters.  
+When you start the game, the bot picks up a random word (via random-word-api) and gives you extra lives to guess the word by typing letters.  
 
-Count of chances (❤️ emojis) = count of unique letters in the hidden word)
+Count of extra lives (❤️ emojis) = count of unique letters in the hidden word)
 
-When you type a letter, if the letter is contained in the word, it will be shown up. Elsewise, you will lose one chance.
+When you type a letter, if the letter is contained in the word, it will be shown up. Elsewise, you will lose one life.  
 
-If you need help - you can use `/help` command (only once) to get definition of the word.  
+if you need a hitn,  `/letter` will show up random letter for you (costs one life)
+
+If the word is really hard to guess - you can use `/help` command (costs one life) to get meaning of the word.  
 (I used oxford dictionary api to get definition)
 
 Screenshot from game:
